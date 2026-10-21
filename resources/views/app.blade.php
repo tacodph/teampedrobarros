@@ -67,6 +67,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#050708">
+        <meta name="google-site-verification" content="qh_gOHIaSDl7zr7DMPwOXEzhCDHNNAADYxfxhYNBaMQ" />
 
         <title inertia>{{ $shareTitle }}</title>
         <meta name="description" content="{{ $shareDescription }}">
