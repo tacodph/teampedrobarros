@@ -4,79 +4,80 @@
 
 body,
 html {
-    --font-sans: 'Barlow', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans:
+        'Barlow Condensed', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 @layer base {
     :root {
-        --background: 30 11% 7%;
-        --foreground: 38 35% 94%;
-        --card: 30 11% 9%;
-        --card-foreground: 38 35% 94%;
-        --popover: 30 11% 11%;
-        --popover-foreground: 38 35% 94%;
-        --primary: 38 92% 55%;
-        --primary-foreground: 30 11% 7%;
-        --secondary: 30 11% 11%;
-        --secondary-foreground: 38 35% 94%;
-        --muted: 33 12% 15%;
-        --muted-foreground: 35 9% 60%;
-        --accent: 33 11% 16%;
-        --accent-foreground: 38 35% 94%;
+        --background: 200 23% 3%;
+        --foreground: 0 0% 100%;
+        --card: 204 22% 5%;
+        --card-foreground: 0 0% 100%;
+        --popover: 204 22% 6%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 191 88% 56%;
+        --primary-foreground: 200 23% 3%;
+        --secondary: 204 22% 6%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 200 16% 10%;
+        --muted-foreground: 198 13% 75%;
+        --accent: 200 16% 12%;
+        --accent-foreground: 0 0% 100%;
         --destructive: 6 80% 55%;
-        --destructive-foreground: 38 35% 94%;
-        --border: 33 11% 16%;
-        --input: 33 11% 16%;
-        --ring: 38 92% 55%;
-        --chart-1: 38 92% 55%;
-        --chart-2: 186 69% 46%;
-        --chart-3: 6 80% 55%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 191 45% 16%;
+        --input: 191 45% 16%;
+        --ring: 191 88% 56%;
+        --chart-1: 191 88% 56%;
+        --chart-2: 0 0% 100%;
+        --chart-3: 198 13% 75%;
         --chart-4: 98 50% 46%;
         --chart-5: 207 74% 53%;
-        --radius: 1.25rem;
-        --sidebar-background: 30 11% 9%;
-        --sidebar-foreground: 38 35% 94%;
-        --sidebar-primary: 38 92% 55%;
-        --sidebar-primary-foreground: 30 11% 7%;
-        --sidebar-accent: 33 12% 15%;
-        --sidebar-accent-foreground: 38 35% 94%;
-        --sidebar-border: 33 12% 15%;
-        --sidebar-ring: 38 92% 55%;
+        --radius: 0px;
+        --sidebar-background: 204 22% 5%;
+        --sidebar-foreground: 0 0% 100%;
+        --sidebar-primary: 191 88% 56%;
+        --sidebar-primary-foreground: 200 23% 3%;
+        --sidebar-accent: 200 16% 10%;
+        --sidebar-accent-foreground: 0 0% 100%;
+        --sidebar-border: 191 45% 16%;
+        --sidebar-ring: 191 88% 56%;
     }
 
     .dark {
-        --background: 30 11% 7%;
-        --foreground: 38 35% 94%;
-        --card: 30 11% 9%;
-        --card-foreground: 38 35% 94%;
-        --popover: 30 11% 11%;
-        --popover-foreground: 38 35% 94%;
-        --primary: 38 92% 55%;
-        --primary-foreground: 30 11% 7%;
-        --secondary: 30 11% 11%;
-        --secondary-foreground: 38 35% 94%;
-        --muted: 33 12% 15%;
-        --muted-foreground: 35 9% 60%;
-        --accent: 33 11% 16%;
-        --accent-foreground: 38 35% 94%;
+        --background: 200 23% 3%;
+        --foreground: 0 0% 100%;
+        --card: 204 22% 5%;
+        --card-foreground: 0 0% 100%;
+        --popover: 204 22% 6%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 191 88% 56%;
+        --primary-foreground: 200 23% 3%;
+        --secondary: 204 22% 6%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 200 16% 10%;
+        --muted-foreground: 198 13% 75%;
+        --accent: 200 16% 12%;
+        --accent-foreground: 0 0% 100%;
         --destructive: 6 80% 55%;
-        --destructive-foreground: 38 35% 94%;
-        --border: 33 11% 16%;
-        --input: 33 11% 16%;
-        --ring: 38 92% 55%;
-        --chart-1: 38 92% 55%;
-        --chart-2: 186 69% 46%;
-        --chart-3: 6 80% 55%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 191 45% 16%;
+        --input: 191 45% 16%;
+        --ring: 191 88% 56%;
+        --chart-1: 191 88% 56%;
+        --chart-2: 0 0% 100%;
+        --chart-3: 198 13% 75%;
         --chart-4: 98 50% 46%;
         --chart-5: 207 74% 53%;
-        --sidebar-background: 30 11% 9%;
-        --sidebar-foreground: 38 35% 94%;
-        --sidebar-primary: 38 92% 55%;
-        --sidebar-primary-foreground: 30 11% 7%;
-        --sidebar-accent: 33 12% 15%;
-        --sidebar-accent-foreground: 38 35% 94%;
-        --sidebar-border: 33 12% 15%;
-        --sidebar-ring: 38 92% 55%;
+        --sidebar-background: 204 22% 5%;
+        --sidebar-foreground: 0 0% 100%;
+        --sidebar-primary: 191 88% 56%;
+        --sidebar-primary-foreground: 200 23% 3%;
+        --sidebar-accent: 200 16% 10%;
+        --sidebar-accent-foreground: 0 0% 100%;
+        --sidebar-border: 191 45% 16%;
+        --sidebar-ring: 191 88% 56%;
     }
 }
 
@@ -101,11 +102,11 @@ html {
 
 @layer components {
     .font-display {
-        font-family: 'Barlow Condensed', ui-sans-serif, sans-serif;
+        font-family: Knewave, cursive;
     }
 
     .font-script {
-        font-family: 'Kaushan Script', cursive;
+        font-family: Knewave, cursive;
     }
 
     .eyebrow {
@@ -113,16 +114,124 @@ html {
     }
 
     .display-title {
-        font-family: 'Barlow Condensed', ui-sans-serif, sans-serif;
-        @apply font-black italic uppercase leading-[0.9];
+        font-family: Knewave, cursive;
+        @apply font-normal leading-none;
     }
 
     .surface-card {
-        @apply rounded-[22px] border border-brand-line2 bg-brand-card;
+        @apply rounded-none border border-brand-gold/35 bg-brand-card;
+    }
+
+    .clip-cta {
+        clip-path: polygon(1% 10%, 30% 3%, 62% 8%, 99% 2%, 98% 50%, 100% 94%, 64% 98%, 30% 92%, 0% 98%, 2% 50%);
+    }
+
+    .clip-heading {
+        clip-path: polygon(3% 18%, 20% 6%, 44% 12%, 66% 3%, 88% 10%, 100% 6%, 97% 46%, 99% 84%, 80% 96%, 58% 88%, 34% 99%, 12% 90%, 0% 95%, 2% 52%);
+    }
+
+    .clip-heading-alt {
+        clip-path: polygon(2% 14%, 16% 4%, 38% 10%, 60% 2%, 84% 9%, 99% 4%, 97% 42%, 100% 80%, 83% 96%, 61% 89%, 37% 98%, 15% 91%, 0% 97%, 3% 55%);
+    }
+
+    .clip-stamp {
+        clip-path: polygon(2% 10%, 24% 2%, 52% 8%, 78% 1%, 99% 7%, 97% 46%, 100% 88%, 74% 97%, 46% 92%, 20% 99%, 0% 92%, 3% 50%);
+    }
+
+    .clip-photo-a {
+        clip-path: polygon(3% 2%, 30% 0, 62% 3%, 98% 0, 100% 30%, 97% 64%, 100% 98%, 66% 100%, 34% 97%, 0 100%, 2% 66%, 0 30%);
+    }
+
+    .clip-photo-b {
+        clip-path: polygon(2% 0, 34% 3%, 66% 0, 100% 2%, 98% 34%, 100% 70%, 97% 100%, 64% 97%, 30% 100%, 0 98%, 3% 64%, 0 32%);
+    }
+
+    .clip-dash {
+        clip-path: polygon(0 30%, 100% 0, 96% 100%, 4% 90%);
+    }
+
+    .clip-dash-wide {
+        clip-path: polygon(0 30%, 100% 0, 97% 100%, 3% 80%);
+    }
+
+    .btn-cta {
+        @apply inline-flex items-center gap-2.5 bg-brand-gold px-[30px] py-4 font-display text-2xl text-brand-ink transition-colors;
+        transform: rotate(-2deg);
+        clip-path: polygon(1% 10%, 30% 3%, 62% 8%, 99% 2%, 98% 50%, 100% 94%, 64% 98%, 30% 92%, 0% 98%, 2% 50%);
+    }
+
+    .btn-cta:hover {
+        @apply bg-white text-brand-ink;
+    }
+
+    .btn-skew {
+        @apply inline-block bg-brand-gold px-[18px] py-2.5 font-bold uppercase tracking-wider text-brand-ink;
+        transform: skewX(-8deg);
+    }
+
+    .btn-outline {
+        @apply border-2 border-brand-gold bg-transparent px-[22px] py-3 text-lg font-extrabold uppercase tracking-[1.5px] text-brand-gold transition-colors;
+    }
+
+    .btn-outline:hover {
+        @apply bg-brand-gold text-brand-ink;
+    }
+
+    .btn-ghost-line {
+        @apply border-2 border-white px-[22px] py-3 text-lg font-extrabold uppercase tracking-[1.5px] text-white transition-colors;
+    }
+
+    .btn-ghost-line:hover {
+        @apply bg-white text-brand-ink;
+    }
+
+    .brand-canvas {
+        @apply relative min-h-screen overflow-hidden bg-brand-ink text-white;
+    }
+
+    .brand-canvas::before,
+    .brand-canvas::after {
+        content: '';
+        position: absolute;
+        width: 520px;
+        height: 420px;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+            115deg,
+            rgba(44, 203, 242, 0.55) 0 3px,
+            transparent 3px 14px,
+            rgba(44, 203, 242, 0.25) 14px 16px,
+            transparent 16px 30px
+        );
+        mask-image: radial-gradient(closest-side, #000 30%, transparent);
+        -webkit-mask-image: radial-gradient(closest-side, #000 30%, transparent);
+    }
+
+    .brand-canvas::before {
+        top: -120px;
+        left: -160px;
+        transform: rotate(-8deg);
+    }
+
+    .brand-canvas::after {
+        top: 1100px;
+        right: -200px;
+        background: repeating-linear-gradient(
+            115deg,
+            rgba(44, 203, 242, 0.45) 0 3px,
+            transparent 3px 14px,
+            rgba(44, 203, 242, 0.2) 14px 16px,
+            transparent 16px 30px
+        );
+    }
+
+    .portrait-duotone {
+        filter: grayscale(1) contrast(1.2);
+        mix-blend-mode: multiply;
     }
 
     input[type='range'] {
-        accent-color: #23b8c4;
+        accent-color: #2ccbf2;
     }
 }
 

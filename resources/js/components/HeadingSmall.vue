@@ -9,7 +9,7 @@ defineProps<Props>();
 
 <template>
     <header>
-        <h3 class="font-display mb-0.5 text-xl font-extrabold uppercase italic">{{ title }}</h3>
+        <h3 class="font-display mb-0.5 text-xl leading-none">{{ title }}</h3>
         <p v-if="description" class="text-sm text-muted-foreground">
             {{ description }}
         </p>

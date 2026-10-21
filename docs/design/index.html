@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" href="assets/logo-desafio.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Knewave&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#050708;color:#fff;font-family:'Barlow Condensed',sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#2CCBF2;text-decoration:none}
+a:hover{color:#fff}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#050708;overflow:hidden;position:relative">
+  <div style="position:absolute;top:-120px;left:-160px;width:520px;height:420px;background:repeating-linear-gradient(115deg,rgba(44,203,242,0.55) 0 3px,transparent 3px 14px,rgba(44,203,242,0.25) 14px 16px,transparent 16px 30px);transform:rotate(-8deg);mask-image:radial-gradient(closest-side,#000 30%,transparent);-webkit-mask-image:radial-gradient(closest-side,#000 30%,transparent);pointer-events:none"></div>
+  <div style="position:absolute;top:1100px;right:-200px;width:520px;height:420px;background:repeating-linear-gradient(115deg,rgba(44,203,242,0.45) 0 3px,transparent 3px 14px,rgba(44,203,242,0.2) 14px 16px,transparent 16px 30px);mask-image:radial-gradient(closest-side,#000 30%,transparent);-webkit-mask-image:radial-gradient(closest-side,#000 30%,transparent);pointer-events:none"></div>
+
+  <header style="position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <img src="assets/logo-desafio.png" alt="Desafio de Verão — Team Pedro Barros" style="display:block;height:80px;width:auto;mix-blend-mode:screen">
+    <nav style="display:flex;align-items:center;gap:28px;font-weight:700;font-size:17px;letter-spacing:1px;text-transform:uppercase">
+      <a href="#detalhes" style="color:#fff">Detalhes</a>
+      <a href="#como-funciona" style="color:#fff">Como funciona</a>
+      <a href="#inscricao" style="background:#2CCBF2;color:#050708;padding:10px 18px;transform:skewX(-8deg);display:inline-block">Garanta sua vaga</a>
+    </nav>
+  </header>
+
+  <section data-screen-label="Hero" style="position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:32px 24px 56px;display:flex;flex-wrap:wrap;align-items:center;gap:40px">
+    <div style="flex:1 1 460px;min-width:0">
+      <div style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(44,203,242,0.5);padding:6px 14px;font-weight:700;font-size:16px;letter-spacing:2px;text-transform:uppercase;color:#2CCBF2">01/11 a 05/12 · 30 dias</div>
+      <h1 style="margin:24px 0 0;max-width:620px">
+        <img src="assets/logo-desafio.png" alt="Desafio de Verão — Team Pedro Barros" style="display:block;width:100%;height:auto;mix-blend-mode:screen">
+      </h1>
+      <p style="margin:34px 0 0;max-width:560px;font-size:clamp(22px,2.4vw,28px);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;line-height:1.25;text-wrap:pretty">Quer chegar ao verão mais <span style="color:#2CCBF2;font-style:italic">leve</span>, mais <span style="color:#2CCBF2">saudável</span> e com mais <span style="color:#2CCBF2;font-style:italic">disposição</span>?</p>
+      <div style="margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:20px">
+        <a href="#inscricao" style="display:inline-flex;align-items:center;gap:10px;background:#2CCBF2;color:#050708;padding:16px 30px;font-family:Knewave,cursive;font-size:24px;transform:rotate(-2deg);clip-path:polygon(1% 10%,30% 3%,62% 8%,99% 2%,98% 50%,100% 94%,64% 98%,30% 92%,0% 98%,2% 50%)" style-hover="background:#fff;color:#050708">GARANTA SUA VAGA!</a>
+        <div style="display:flex;flex-direction:column;line-height:1">
+          <span style="font-size:16px;font-weight:700;letter-spacing:2px;color:#B8C4C9;text-transform:uppercase">Apenas</span>
+          <span style="font-weight:800;font-size:40px">R$ 60<span style="font-size:24px">,00</span></span>
+        </div>
+      </div>
+    </div>
+    <sc-if value="{{ showPortraits }}" hint-placeholder-val="{{ true }}">
+      <div style="flex:1 1 380px;min-width:0;max-width:560px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end">
+        <figure style="margin:0;position:relative">
+          <div style="background:#2CCBF2;transform:rotate(-2deg);clip-path:polygon(3% 2%,30% 0,62% 3%,98% 0,100% 30%,97% 64%,100% 98%,66% 100%,34% 97%,0 100%,2% 66%,0 30%)"><img src="assets/pedro-2.jpeg" alt="Pedro Barros, coach" style="display:block;width:100%;aspect-ratio:3/4.2;object-fit:cover;object-position:50% 8%;filter:grayscale(1) contrast(1.2);mix-blend-mode:multiply"></div>
+          <figcaption style="margin-top:16px;transform:rotate(-4deg)">
+            <div style="font-family:Knewave,cursive;font-size:clamp(24px,2.6vw,32px);line-height:0.95">PEDRO<br>BARROS</div>
+            <div style="margin-top:6px;height:5px;width:120px;background:#2CCBF2;clip-path:polygon(0 30%,100% 0,96% 100%,4% 90%)"></div>
+            <div style="margin-top:4px;font-weight:700;font-size:17px;letter-spacing:2px">COACH</div>
+          </figcaption>
+        </figure>
+        <figure style="margin:0 0 40px;position:relative">
+          <div style="background:#2CCBF2;transform:rotate(2deg);clip-path:polygon(2% 0,34% 3%,66% 0,100% 2%,98% 34%,100% 70%,97% 100%,64% 97%,30% 100%,0 98%,3% 64%,0 32%)"><img src="assets/thais-3.png" alt="Thaís Moraes, nutricionista" style="display:block;width:100%;aspect-ratio:3/4.2;object-fit:cover;object-position:50% 8%;filter:grayscale(1) contrast(1.2);mix-blend-mode:multiply"></div>
+          <figcaption style="margin-top:16px;text-align:right;transform:rotate(-4deg)">
+            <div style="font-family:Knewave,cursive;font-size:clamp(24px,2.6vw,32px);line-height:0.95">THAÍS<br>MORAES</div>
+            <div style="margin:6px 0 0 auto;height:5px;width:140px;background:#2CCBF2;clip-path:polygon(0 30%,100% 0,96% 100%,4% 90%)"></div>
+            <div style="margin-top:4px;font-weight:700;font-size:17px;letter-spacing:2px">NUTRICIONISTA</div>
+          </figcaption>
+        </figure>
+      </div>
+    </sc-if>
+  </section>
+
+  <section id="detalhes" data-screen-label="Detalhes" style="position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 24px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));border-top:1px solid rgba(44,203,242,0.35);border-bottom:1px solid rgba(44,203,242,0.35)">
+      <div style="padding:36px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;border-right:1px solid rgba(44,203,242,0.25)">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="#2CCBF2" stroke-width="3" stroke-linejoin="round"><rect x="6" y="9" width="36" height="33" rx="3"></rect><path d="M6 18h36M15 5v8M33 5v8M14 26h4M22 26h4M30 26h4M14 33h4M22 33h4"></path></svg>
+        <div style="font-weight:800;font-size:34px;line-height:1">DE 01/11<br>A 05/12</div>
+        <div style="font-weight:600;font-size:18px;letter-spacing:1px;color:#B8C4C9">DURAÇÃO <span style="color:#fff;font-weight:800">30 DIAS</span></div>
+      </div>
+      <div style="padding:36px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;border-right:1px solid rgba(44,203,242,0.25)">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="#2CCBF2" stroke-width="3"><ellipse cx="30" cy="10" rx="13" ry="5"></ellipse><path d="M17 10v6c0 2.8 5.8 5 13 5s13-2.2 13-5v-6M17 16v6c0 2.8 5.8 5 13 5s13-2.2 13-5v-6"></path><ellipse cx="18" cy="30" rx="13" ry="5"></ellipse><path d="M5 30v6c0 2.8 5.8 5 13 5s13-2.2 13-5v-6"></path></svg>
+        <div style="font-weight:800;font-size:22px;letter-spacing:1px">APENAS</div>
+        <div style="font-weight:800;font-size:28px;line-height:0.9">R$ <span style="font-size:58px">60</span>,00</div>
+      </div>
+      <div style="padding:36px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;border-right:1px solid rgba(44,203,242,0.25)">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="#2CCBF2" stroke-width="3" stroke-linejoin="round"><path d="M10 4h20l8 8v32H10z"></path><path d="M30 4v8h8M16 20h16M16 27h16M16 34h8"></path></svg>
+        <div style="font-weight:800;font-size:30px;line-height:1">BIOIMPEDÂNCIA</div>
+        <div style="font-weight:600;font-size:19px;letter-spacing:1px;color:#B8C4C9">INICIAL (28/10) E FINAL</div>
+      </div>
+      <div style="padding:36px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="#2CCBF2" stroke-width="3" stroke-linejoin="round"><path d="M14 6h20v12a10 10 0 0 1-20 0z"></path><path d="M14 10H6c0 7 4 11 9 11M34 10h8c0 7-4 11-9 11M24 28v8M16 42h16l-2-6H18z"></path></svg>
+        <div style="font-weight:800;font-size:30px;line-height:1">PREMIAÇÃO</div>
+        <div style="font-weight:600;font-size:18px;letter-spacing:0.5px;color:#B8C4C9;text-wrap:pretty">PARA 1º, 2º E 3º LUGAR, DE ACORDO COM A EVOLUÇÃO NA BIOIMPEDÂNCIA</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" data-screen-label="Como funciona" style="position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:80px 24px 40px">
+    <div style="display:flex;justify-content:center">
+      <h2 style="margin:0;background:#2CCBF2;color:#050708;padding:16px 48px 12px;font-family:Knewave,cursive;font-weight:400;font-size:clamp(32px,4.4vw,52px);line-height:1;transform:rotate(-3deg);clip-path:polygon(3% 18%,20% 6%,44% 12%,66% 3%,88% 10%,100% 6%,97% 46%,99% 84%,80% 96%,58% 88%,34% 99%,12% 90%,0% 95%,2% 52%)">COMO VAI FUNCIONAR?</h2>
+    </div>
+    <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))">
+      <div style="padding:28px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;border-right:1px solid rgba(44,203,242,0.25)">
+        <svg width="64" height="52" viewBox="0 0 60 48" fill="none" stroke="#2CCBF2" stroke-width="3" stroke-linejoin="round"><rect x="8" y="12" width="7" height="24" rx="2"></rect><rect x="45" y="12" width="7" height="24" rx="2"></rect><rect x="2" y="17" width="6" height="14" rx="2"></rect><rect x="52" y="17" width="6" height="14" rx="2"></rect><path d="M15 24h30"></path></svg>
+        <div style="font-family:Knewave,cursive;font-size:30px;line-height:1">TREINO</div>
+        <div style="font-weight:600;font-size:19px;letter-spacing:0.5px;color:#B8C4C9">DURANTE TODO O DESAFIO</div>
+      </div>
+      <div style="padding:28px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;border-right:1px solid rgba(44,203,242,0.25)">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="#2CCBF2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12a5 5 0 0 0 10 0V4M17 4v40M34 44V4c-5 3-7 10-7 18h7"></path></svg>
+        <div style="font-family:Knewave,cursive;font-size:30px;line-height:1">DIETA</div>
+        <div style="font-weight:600;font-size:19px;letter-spacing:0.5px;color:#B8C4C9">COM ORIENTAÇÃO DA NUTRICIONISTA THAÍS MORAES</div>
+      </div>
+      <div style="padding:28px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;border-right:1px solid rgba(44,203,242,0.25)">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="#2CCBF2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="3" width="28" height="42" rx="4"></rect><path d="M17 33l5-6 4 3 6-8M29 22h3v3"></path></svg>
+        <div style="font-family:Knewave,cursive;font-size:30px;line-height:1">GYMRATS</div>
+        <div style="font-weight:600;font-size:19px;letter-spacing:0.5px;color:#B8C4C9">REGISTRO DIÁRIO E ACOMPANHAMENTO DA SUA EVOLUÇÃO</div>
+      </div>
+      <div style="padding:28px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="#2CCBF2" stroke-width="3" stroke-linejoin="round"><path d="M24 4l6 13 14 1.5-10.5 9.5 3 14L24 35l-12.5 7 3-14L4 18.5 18 17z"></path></svg>
+        <div style="font-family:Knewave,cursive;font-size:30px;line-height:1">DESAFIOS</div>
+        <div style="font-weight:600;font-size:19px;letter-spacing:0.5px;color:#B8C4C9">E METAS TODO DIA</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inscricao" data-screen-label="Inscrição" style="position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:56px 24px 40px">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:40px;border-top:1px solid rgba(44,203,242,0.35);border-bottom:1px solid rgba(44,203,242,0.35);padding:48px 0">
+      <div style="flex:0 1 auto;background:#2CCBF2;color:#050708;padding:20px 44px 16px;transform:rotate(-5deg);clip-path:polygon(2% 10%,24% 2%,52% 8%,78% 1%,99% 7%,97% 46%,100% 88%,74% 97%,46% 92%,20% 99%,0% 92%,3% 50%);text-align:center">
+        <div style="font-family:Knewave,cursive;font-size:26px;line-height:1">INSCRIÇÕES ATÉ</div>
+        <div style="font-family:Knewave,cursive;font-size:clamp(40px,5vw,58px);line-height:1">30 DE OUTUBRO</div>
+      </div>
+      <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:18px;min-width:0">
+        <div style="display:flex;align-items:center;gap:18px">
+          <svg width="58" height="44" viewBox="0 0 58 44" fill="none" stroke="#2CCBF2" stroke-width="3.5" stroke-linejoin="round"><rect x="3" y="3" width="52" height="38" rx="5"></rect><path d="M3 14h52M11 30h14"></path></svg>
+          <div style="line-height:1">
+            <div style="font-weight:800;font-size:20px;letter-spacing:2px;color:#2CCBF2">PIX</div>
+            <div style="font-weight:800;font-size:clamp(34px,4vw,44px)">61 99840-1811</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <button onClick="{{ copyPix }}" style="cursor:pointer;border:2px solid #2CCBF2;background:transparent;color:#2CCBF2;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;letter-spacing:1.5px;padding:12px 22px;text-transform:uppercase" style-hover="background:#2CCBF2;color:#050708">{{ copyLabel }}</button>
+          <a href="{{ whatsHref }}" target="_blank" rel="noopener" style="border:2px solid #fff;color:#fff;font-weight:800;font-size:18px;letter-spacing:1.5px;padding:12px 22px;text-transform:uppercase" style-hover="background:#fff;color:#050708">Enviar comprovante</a>
+        </div>
+      </div>
+      <div style="flex:0 1 auto;font-family:Knewave,cursive;font-size:clamp(36px,4vw,48px);line-height:0.95;transform:rotate(-8deg);text-align:center">GARANTA<br>SUA VAGA!<div style="margin:8px auto 0;height:6px;width:80%;background:#2CCBF2;clip-path:polygon(0 30%,100% 0,96% 100%,4% 90%)"></div></div>
+    </div>
+    <sc-if value="{{ showCountdown }}" hint-placeholder-val="{{ true }}">
+      <div style="margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:14px">
+        <div style="font-weight:700;font-size:18px;letter-spacing:3px;color:#B8C4C9;text-transform:uppercase">{{ countdownLabel }}</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+          <sc-for list="{{ countdown }}" as="u" hint-placeholder-count="4">
+            <div style="min-width:96px;padding:14px 10px;border:1px solid rgba(44,203,242,0.45);background:#0B0F11;text-align:center">
+              <div style="font-weight:800;font-size:44px;line-height:1;font-variant-numeric:tabular-nums">{{ u.v }}</div>
+              <div style="margin-top:6px;font-weight:700;font-size:15px;letter-spacing:2px;color:#2CCBF2">{{ u.l }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+  </section>
+
+  <section id="equipe" data-screen-label="Equipe" style="position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:56px 24px 24px">
+    <div style="display:flex;justify-content:center">
+      <h2 style="margin:0;background:#fff;color:#050708;padding:14px 44px 10px;font-family:Knewave,cursive;font-weight:400;font-size:clamp(30px,4vw,46px);line-height:1;transform:rotate(-3deg);clip-path:polygon(2% 14%,16% 4%,38% 10%,60% 2%,84% 9%,99% 4%,97% 42%,100% 80%,83% 96%,61% 89%,37% 98%,15% 91%,0% 97%,3% 55%)">QUEM VAI TE ACOMPANHAR</h2>
+    </div>
+    <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px">
+      <div style="display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr);gap:24px;align-items:center;padding:24px;background:#0B0F11;border:1px solid rgba(44,203,242,0.35)">
+        <div style="background:#2CCBF2"><img src="assets/pedro-2.jpeg" alt="Pedro Barros" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 5%;filter:grayscale(1) contrast(1.2);mix-blend-mode:multiply"></div>
+        <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
+          <div style="font-weight:800;font-size:16px;letter-spacing:2px;color:#2CCBF2">COACH</div>
+          <div style="font-family:Knewave,cursive;font-size:34px;line-height:1">PEDRO BARROS</div>
+          <div style="font-weight:600;font-size:16px;letter-spacing:1px;color:#B8C4C9">CREF 020856-G/DF · Brasília DF</div>
+          <div style="display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:18px;line-height:1.3;color:#fff">
+            <span style="font-style:italic;color:#2CCBF2">Movimento é vida! Transforme-se comigo!</span>
+            <span>CrossFit · Personal · Dança</span>
+            <span>Consultoria on-line</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px 20px">
+            <a href="https://www.instagram.com/pedrobarrosof" target="_blank" rel="noopener" style="font-weight:800;font-size:18px;letter-spacing:1px">@pedrobarrosof</a>
+            <a href="https://wa.me/5561998401811" target="_blank" rel="noopener" style="font-weight:800;font-size:18px;letter-spacing:1px">61 99840-1811</a>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr);gap:24px;align-items:center;padding:24px;background:#0B0F11;border:1px solid rgba(44,203,242,0.35)">
+        <div style="background:#2CCBF2"><img src="assets/thais-3.png" alt="Thaís Moraes" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 5%;filter:grayscale(1) contrast(1.2);mix-blend-mode:multiply"></div>
+        <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
+          <div style="font-weight:800;font-size:16px;letter-spacing:2px;color:#2CCBF2">NUTRICIONISTA</div>
+          <div style="font-family:Knewave,cursive;font-size:34px;line-height:1">THAÍS MORAES</div>
+          <div style="font-weight:600;font-size:16px;letter-spacing:1px;color:#B8C4C9">CRN1 7235</div>
+          <div style="display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:18px;line-height:1.3;color:#fff">
+            <span style="font-style:italic;color:#2CCBF2">Nutrição Esportiva · Performance</span>
+            <span>Emagrecimento e metabolismo feminino</span>
+            <span>Intestino · Hormônio · NutriGenética</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px 20px">
+            <a href="https://www.instagram.com/thaismoraesnutri" target="_blank" rel="noopener" style="font-weight:800;font-size:18px;letter-spacing:1px">@thaismoraesnutri</a>
+            <a href="https://wa.me/5561998548549" target="_blank" rel="noopener" style="font-weight:800;font-size:18px;letter-spacing:1px">61 99854-8549</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:40px 24px 72px;text-align:center">
+    <p style="margin:0;font-family:Knewave,cursive;font-size:clamp(24px,3vw,36px);line-height:1.15;transform:rotate(-2deg);text-wrap:balance">ENTRE PARA O TEAM PEDRO BARROS<br>E VENHA CONQUISTAR SUA MELHOR VERSÃO NESTE VERÃO!</p>
+    <div style="margin:14px auto 0;height:6px;width:min(560px,80%);background:#2CCBF2;clip-path:polygon(0 30%,100% 0,97% 100%,3% 80%)"></div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPortraits&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;showCountdown&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { now: Date.now(), copied: false };
+  componentDidMount() { this.t = setInterval(() => this.setState({ now: Date.now() }), 1000); }
+  componentWillUnmount() { clearInterval(this.t); clearTimeout(this.c); }
+  renderVals() {
+    const end = new Date('2026-10-30T23:59:59-03:00').getTime();
+    const diff = Math.max(0, end - this.state.now);
+    const p = n => String(n).padStart(2, '0');
+    const s = Math.floor(diff / 1000);
+    return {
+      showPortraits: this.props.showPortraits ?? true,
+      showCountdown: this.props.showCountdown ?? true,
+      countdownLabel: diff > 0 ? 'Inscrições encerram em' : 'Inscrições encerradas',
+      countdown: [
+        { v: p(Math.floor(s / 86400)), l: 'DIAS' },
+        { v: p(Math.floor(s / 3600) % 24), l: 'HORAS' },
+        { v: p(Math.floor(s / 60) % 60), l: 'MIN' },
+        { v: p(s % 60), l: 'SEG' }
+      ],
+      copyLabel: this.state.copied ? 'Chave copiada ✓' : 'Copiar chave PIX',
+      copyPix: () => {
+        navigator.clipboard?.writeText('61998401811').catch(() => {});
+        this.setState({ copied: true });
+        clearTimeout(this.c);
+        this.c = setTimeout(() => this.setState({ copied: false }), 2000);
+      },
+      whatsHref: 'https://wa.me/5561998401811?text=' + encodeURIComponent('Olá! Fiz o PIX do Desafio de Verão Team Pedro Barros e quero garantir minha vaga.')
+    };
+  }
+}
+</script>
+</body>
+</html>

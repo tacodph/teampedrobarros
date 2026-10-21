@@ -1,11 +1,11 @@
 ﻿import { computed, onMounted, onUnmounted, ref } from 'vue';
 
-export const INSTAGRAM_URL = 'https://www.instagram.com/desafio60.firme/';
+export const INSTAGRAM_URL = 'https://www.instagram.com/pedrobarrosof/';
 
 export const GOALS = [
     {
         key: 'treino',
-        color: '#E8432E',
+        color: '#2CCBF2',
         metric: '45 min',
         title: 'Treino e movimento',
         desc: 'Qualquer modalidade. Pelo menos 2x por semana ao ar livre.',
@@ -13,7 +13,7 @@ export const GOALS = [
     },
     {
         key: 'alimentacao',
-        color: '#5DB33A',
+        color: '#7EE0A3',
         metric: '3L de água',
         title: 'Alimentação e hidratação',
         desc: 'Sem álcool, fast food e doce industrializado. 1 refeição luxo por semana.',
@@ -21,7 +21,7 @@ export const GOALS = [
     },
     {
         key: 'oracao',
-        color: '#2E8FE0',
+        color: '#7EB6FF',
         metric: '10 + 30 min',
         title: 'Fé e família',
         desc: 'Oração diária, missa ou culto semanal e família sem celular.',
@@ -29,7 +29,7 @@ export const GOALS = [
     },
     {
         key: 'habilidade',
-        color: '#9B4FD0',
+        color: '#B8C4C9',
         metric: '15 min',
         title: 'Habilidade nova',
         desc: 'Escolha no dia 1, pratique todo dia, mostre no dia 60.',
@@ -37,7 +37,7 @@ export const GOALS = [
     },
     {
         key: 'flexoes',
-        color: '#23B8C4',
+        color: '#2CCBF2',
         metric: '30 → 100',
         title: 'Flexões progressivas',
         desc: 'A meta sobe a cada 10 dias. 4.000 no total.',
@@ -50,7 +50,7 @@ const MILES = [
     { day: 15, date: '6 nov', title: 'Tá ficando real!', line: 'Olha o comprometimento. Olha a amizade ficando mais forte.' },
     { day: 30, date: '21 nov', title: 'Metade do caminho!', line: 'Isso não é sorte. Isso é disciplina. Isso é honra entre amigos.' },
     { day: 45, date: '6 dez', title: 'Reta final!', line: '15 dias pra virar regra. 15 dias pro verão.' },
-    { day: 60, date: '20 dez', title: 'Conseguimos.', line: 'Próximo verão? Desafio 60 Firme de novo.' },
+    { day: 60, date: '20 dez', title: 'Conseguimos.', line: 'Próximo verão? Desafio de Verão de novo.' },
 ];
 
 const START = new Date(2026, 9, 22, 0, 0, 0).getTime();
@@ -149,7 +149,7 @@ export function useChallenge() {
 
             return {
                 h: `${repsForDay(day)}%`,
-                c: day === pushDay.value ? '#F5F1EA' : day < pushDay.value ? '#23B8C4' : '#2E2A25',
+                c: day === pushDay.value ? '#FFFFFF' : day < pushDay.value ? '#2CCBF2' : '#16333A',
             };
         }),
     );
@@ -172,7 +172,7 @@ export function useChallenge() {
 
     const failDots = computed(() =>
         Array.from({ length: 60 }, (_, index) => ({
-            c: index < fails.value ? '#F6A821' : '#2E2A25',
+            c: index < fails.value ? '#2CCBF2' : '#16333A',
         })),
     );
 
@@ -187,10 +187,10 @@ export function useChallenge() {
             return {
                 ...mile,
                 tag: isNext ? (current === mile.day ? 'Hoje' : 'Próximo') : passed ? 'Feito' : '',
-                tagColor: isNext ? '#F6A821' : '#5DB33A',
-                bg: isNext ? '#221E1A' : '#141210',
-                border: isNext ? '#F6A821' : '#2E2A25',
-                numColor: isNext || mile.day === 60 ? '#F6A821' : '#F5F1EA',
+                tagColor: isNext ? '#2CCBF2' : '#7EE0A3',
+                bg: isNext ? '#0B0F11' : '#050708',
+                border: isNext ? '#2CCBF2' : '#16333A',
+                numColor: isNext || mile.day === 60 ? '#2CCBF2' : '#FFFFFF',
             };
         });
     });

@@ -1,9 +1,8 @@
-<script setup lang="ts">
-import AppLogoIcon from '@/components/AppLogoIcon.vue';
+﻿<script setup lang="ts">
+import AppLogo from '@/components/AppLogo.vue';
 import { Link, usePage } from '@inertiajs/vue3';
 
 const page = usePage();
-const name = page.props.name;
 const quote = page.props.quote;
 
 defineProps<{
@@ -13,12 +12,11 @@ defineProps<{
 </script>
 
 <template>
-    <div class="relative grid h-dvh flex-col items-center justify-center px-8 sm:px-0 lg:max-w-none lg:grid-cols-2 lg:px-0">
-        <div class="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
-            <div class="absolute inset-0 bg-zinc-900" />
-            <Link :href="route('home')" class="relative z-20 flex items-center text-lg font-medium">
-                <AppLogoIcon class="mr-2 size-8 fill-current text-white" />
-                {{ name }}
+    <div class="relative grid h-dvh flex-col items-center justify-center bg-brand-ink px-8 sm:px-0 lg:max-w-none lg:grid-cols-2 lg:px-0">
+        <div class="relative hidden h-full flex-col bg-brand-card p-10 text-white lg:flex">
+            <div class="absolute inset-0 bg-brand-ink" />
+            <Link :href="route('home')" class="relative z-20 inline-flex">
+                <AppLogo class="h-20" />
             </Link>
             <div v-if="quote" class="relative z-20 mt-auto">
                 <blockquote class="space-y-2">

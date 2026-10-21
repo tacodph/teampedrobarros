@@ -20,7 +20,7 @@ declare module 'vite/client' {
     }
 }
 
-const appName = import.meta.env.VITE_APP_NAME || 'Desafio 60 Firme';
+const appName = import.meta.env.VITE_APP_NAME || 'Team Pedro Barros';
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -32,7 +32,7 @@ createInertiaApp({
             .mount(el);
     },
     progress: {
-        color: '#F6A821',
+        color: '#2CCBF2',
     },
 });
 

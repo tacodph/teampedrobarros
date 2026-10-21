@@ -14,7 +14,7 @@ defineProps<{
         <path
             d="M0 70 H58 L70 70 L78 46 L90 100 L102 14 L114 86 L122 70 H200"
             fill="none"
-            stroke="#3A2622"
+            stroke="#16333A"
             stroke-width="4"
             stroke-linejoin="round"
             stroke-linecap="round"
@@ -23,7 +23,7 @@ defineProps<{
             d="M0 70 H58 L70 70 L78 46 L90 100 L102 14 L114 86 L122 70 H200"
             pathLength="100"
             fill="none"
-            stroke="#E8432E"
+            stroke="#2CCBF2"
             stroke-width="4.5"
             stroke-linejoin="round"
             stroke-linecap="round"
@@ -37,7 +37,7 @@ defineProps<{
             width="10"
             height="18"
             rx="2"
-            fill="#E8432E"
+            fill="#2CCBF2"
             :opacity="0.35 + (i - 1) * 0.09"
             style="transform-box: fill-box; transform-origin: bottom"
             :style="{ animation: `d60-bar 1.6s ease-in-out ${(i - 1) * 0.12}s infinite` }"
@@ -57,7 +57,7 @@ defineProps<{
             cy="65"
             r="60"
             fill="none"
-            stroke="#9B4FD0"
+            stroke="#2CCBF2"
             stroke-width="2.5"
             style="transform-box: fill-box; transform-origin: center"
             :style="{ animation: `d60-ripple 3.6s ease-out ${(i - 1) * 1.2}s infinite backwards` }"
@@ -67,7 +67,7 @@ defineProps<{
             cy="65"
             r="22"
             fill="none"
-            stroke="#9B4FD0"
+            stroke="#2CCBF2"
             stroke-width="1.5"
             stroke-dasharray="3 5"
             style="transform-box: fill-box; transform-origin: center; animation: d60-spin 14s linear infinite"
@@ -76,7 +76,7 @@ defineProps<{
             cx="100"
             cy="65"
             r="9"
-            fill="#9B4FD0"
+            fill="#2CCBF2"
             style="transform-box: fill-box; transform-origin: center; animation: d60-breathe 3.6s ease-in-out infinite"
         />
     </svg>
@@ -96,24 +96,24 @@ defineProps<{
                     :y1="70 + Math.sin(((i - 1) * Math.PI) / 6) * 32"
                     :x2="100 + Math.cos(((i - 1) * Math.PI) / 6) * 50"
                     :y2="70 + Math.sin(((i - 1) * Math.PI) / 6) * 50"
-                    stroke="#2E8FE0"
+                    stroke="#2CCBF2"
                     stroke-width="3.5"
                     stroke-linecap="round"
                 />
             </g>
-            <circle cx="100" cy="70" r="22" fill="#2E8FE0" />
+            <circle cx="100" cy="70" r="22" fill="#2CCBF2" />
         </g>
         <polygon
             points="22,128 80,66 98,84 122,56 182,128"
-            fill="#1E1B18"
-            stroke="#2E8FE0"
+            fill="#0B0F11"
+            stroke="#2CCBF2"
             stroke-width="3"
             stroke-linejoin="round"
         />
         <polyline
             points="110,70 122,56 134,70"
             fill="none"
-            stroke="#F5F1EA"
+            stroke="#FFFFFF"
             stroke-width="3"
             stroke-linejoin="round"
             stroke-linecap="round"
@@ -132,8 +132,8 @@ defineProps<{
             :cx="100 + Math.cos((deg * Math.PI) / 180) * 18"
             :cy="66 + Math.sin((deg * Math.PI) / 180) * 18"
             r="30"
-            fill="rgba(246,168,33,0.10)"
-            stroke="#F6A821"
+            fill="rgba(44,203,242,0.10)"
+            stroke="#2CCBF2"
             stroke-width="3"
             :style="{
                 '--dx': `${(Math.cos((deg * Math.PI) / 180) * 16).toFixed(1)}px`,
@@ -145,14 +145,14 @@ defineProps<{
             cx="100"
             cy="66"
             r="7"
-            fill="#F5F1EA"
+            fill="#FFFFFF"
             style="transform-box: fill-box; transform-origin: center; animation: d60-spark 3.4s ease-in-out infinite"
         />
     </svg>
 
     <svg v-else viewBox="0 0 320 176" aria-hidden="true" class="block w-full overflow-visible">
-        <line x1="20" y1="120" x2="300" y2="120" stroke="#2E2A25" stroke-width="3" stroke-linecap="round" />
-        <line x1="272" y1="116" x2="110" y2="66" stroke="#23B8C4" stroke-width="9" stroke-linecap="round">
+        <line x1="20" y1="120" x2="300" y2="120" stroke="#16333A" stroke-width="3" stroke-linecap="round" />
+        <line x1="272" y1="116" x2="110" y2="66" stroke="#2CCBF2" stroke-width="9" stroke-linecap="round">
             <animate
                 attributeName="y2"
                 values="66;100;66"
@@ -166,7 +166,7 @@ defineProps<{
         <polyline
             points="110,66 110,92 110,118"
             fill="none"
-            stroke="#23B8C4"
+            stroke="#2CCBF2"
             stroke-width="7"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -181,7 +181,7 @@ defineProps<{
                 keySplines=".45 0 .55 1;.45 0 .55 1"
             />
         </polyline>
-        <circle cx="91" cy="59" r="11" fill="#23B8C4">
+        <circle cx="91" cy="59" r="11" fill="#2CCBF2">
             <animate
                 attributeName="cx"
                 values="91;89;91"
@@ -201,7 +201,7 @@ defineProps<{
                 keySplines=".45 0 .55 1;.45 0 .55 1"
             />
         </circle>
-        <line x1="98" y1="120" x2="124" y2="120" stroke="#F5F1EA" stroke-width="3" stroke-linecap="round" />
+        <line x1="98" y1="120" x2="124" y2="120" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
         <rect
             v-for="(n, i) in [30, 45, 60, 75, 90, 100]"
             :key="n"
@@ -210,11 +210,11 @@ defineProps<{
             width="38"
             :height="n * 0.4"
             rx="4"
-            fill="#2E2A25"
+            fill="#16333A"
         >
             <animate
                 attributeName="fill"
-                :values="`#2E2A25;#23B8C4`"
+                :values="`#16333A;#2CCBF2`"
                 :keyTimes="`0;${((i + 1) / 7).toFixed(3)}`"
                 calcMode="discrete"
                 dur="11.2s"

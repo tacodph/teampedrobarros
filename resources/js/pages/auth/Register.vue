@@ -23,7 +23,7 @@ const submit = () => {
 </script>
 
 <template>
-    <AuthBase title="Quero entrar" description="Crie sua conta e comece os 60 dias firmes">
+    <AuthBase title="Quero entrar" description="Crie sua conta e entre no Desafio de Verão">
         <Head title="Criar conta" />
 
         <form @submit.prevent="submit" class="flex flex-col gap-6">

@@ -1,23 +1,17 @@
 ﻿<script setup lang="ts">
+import { cn } from '@/lib/utils';
 import type { HTMLAttributes } from 'vue';
 
-defineOptions({
-    inheritAttrs: false,
-});
-
-interface Props {
-    className?: HTMLAttributes['class'];
-}
-
-defineProps<Props>();
+const props = defineProps<{
+    class?: HTMLAttributes['class'];
+}>();
 </script>
 
 <template>
     <img
-        src="/images/logo.webp"
-        alt="Desafio 60 Firme"
-        :class="className"
-        class="object-contain"
-        v-bind="$attrs"
+        src="/images/logo-desafio.png"
+        alt="Desafio de Verão — Team Pedro Barros"
+        :class="cn('block h-16 w-auto object-contain', props.class)"
+        style="mix-blend-mode: screen"
     />
 </template>

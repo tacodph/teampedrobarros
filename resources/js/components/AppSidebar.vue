@@ -19,7 +19,7 @@ const mainNavItems: NavItem[] = [
 const footerNavItems: NavItem[] = [
     {
         title: 'Instagram',
-        href: 'https://www.instagram.com/desafio60.firme/',
+        href: 'https://www.instagram.com/pedrobarrosof/',
         icon: Flame,
     },
 ];
@@ -30,9 +30,9 @@ const footerNavItems: NavItem[] = [
         <SidebarHeader>
             <SidebarMenu>
                 <SidebarMenuItem>
-                    <SidebarMenuButton size="lg" as-child>
+                    <SidebarMenuButton size="lg" as-child class="!h-auto py-1.5">
                         <Link :href="route('dashboard')">
-                            <AppLogo />
+                            <AppLogo class="h-14 group-data-[collapsible=icon]:!size-8" />
                         </Link>
                     </SidebarMenuButton>
                 </SidebarMenuItem>

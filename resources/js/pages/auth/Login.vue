@@ -28,7 +28,7 @@ const submit = () => {
 </script>
 
 <template>
-    <AuthBase title="Entre na sua conta" description="Use seu e-mail e senha para continuar o desafio">
+    <AuthBase title="Entre na sua conta" description="Use seu e-mail e senha para continuar no Team Pedro Barros">
         <Head title="Entrar" />
 
         <div v-if="status" class="mb-4 text-center text-sm font-medium text-brand-mente">

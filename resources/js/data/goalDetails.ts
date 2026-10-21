@@ -18,7 +18,7 @@ export type GoalDetail = {
 export const GOAL_DETAILS: GoalDetail[] = [
     {
         key: 'treino',
-        color: '#E8432E',
+        color: '#2CCBF2',
         metric: '45 min',
         title: 'Treino e movimento',
         desc: 'Qualquer modalidade. Pelo menos 2x por semana ao ar livre.',
@@ -44,7 +44,7 @@ export const GOAL_DETAILS: GoalDetail[] = [
     },
     {
         key: 'alimentacao',
-        color: '#5DB33A',
+        color: '#7EE0A3',
         metric: '3L de água',
         title: 'Alimentação e hidratação',
         desc: 'Sem álcool, fast food e doce industrializado. 1 refeição luxo por semana.',
@@ -70,7 +70,7 @@ export const GOAL_DETAILS: GoalDetail[] = [
     },
     {
         key: 'oracao',
-        color: '#2E8FE0',
+        color: '#7EB6FF',
         metric: '10 + 30 min',
         title: 'Fé e família',
         desc: 'Oração diária, missa ou culto semanal e família sem celular.',
@@ -96,7 +96,7 @@ export const GOAL_DETAILS: GoalDetail[] = [
     },
     {
         key: 'habilidade',
-        color: '#9B4FD0',
+        color: '#B8C4C9',
         metric: '15 min',
         title: 'Habilidade nova',
         desc: 'Escolha no dia 1, pratique todo dia, mostre no dia 60.',
@@ -122,7 +122,7 @@ export const GOAL_DETAILS: GoalDetail[] = [
     },
     {
         key: 'flexoes',
-        color: '#23B8C4',
+        color: '#2CCBF2',
         metric: '30 → 100',
         title: 'Flexões progressivas',
         desc: 'A meta sobe a cada 10 dias. 4.000 no total.',

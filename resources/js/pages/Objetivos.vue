@@ -1,7 +1,8 @@
 ﻿<script setup lang="ts">
+import AppLogo from '@/components/AppLogo.vue';
 import BrandArt from '@/components/brand/BrandArt.vue';
-import { GOAL_DETAILS, type GoalKey } from '@/data/goalDetails';
 import { useChallenge } from '@/composables/useChallenge';
+import { GOAL_DETAILS, type GoalKey } from '@/data/goalDetails';
 import { Head, Link } from '@inertiajs/vue3';
 import { ArrowLeft, Menu, X } from 'lucide-vue-next';
 import { nextTick, onMounted, ref, watch } from 'vue';
@@ -37,56 +38,51 @@ watch(
 <template>
     <Head :title="`Objetivos — ${GOAL_DETAILS.find((item) => item.key === goal)?.title ?? 'Regras'}`" />
 
-    <div class="min-h-screen overflow-x-hidden bg-brand-ink text-brand-cream">
-        <header class="sticky top-0 z-20 border-b border-brand-line bg-brand-ink/88 backdrop-blur-[10px]">
-            <div class="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 py-3">
-                <Link :href="route('home')" class="flex items-center gap-2.5 text-brand-cream hover:text-brand-cream">
-                    <img src="/images/logo.webp" alt="Desafio 60 Firme" class="size-11 object-contain" />
-                    <span class="font-display text-[22px] font-extrabold italic uppercase tracking-wide">
-                        Desafio <span class="text-brand-gold">60</span> Firme
-                    </span>
+    <div class="brand-canvas">
+        <header class="bg-brand-ink/88 relative sticky top-0 z-[2] border-b border-brand-gold/25 backdrop-blur-[10px]">
+            <div class="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 py-[22px]">
+                <Link :href="route('home')" class="inline-flex">
+                    <AppLogo class="h-16 sm:h-20" />
                 </Link>
 
-                <nav class="hidden items-center justify-end gap-5 lg:flex">
+                <nav class="hidden items-center justify-end gap-7 text-[17px] font-bold uppercase tracking-[1px] lg:flex">
                     <Link
                         v-for="item in GOAL_DETAILS"
                         :key="item.key"
                         :href="route('objetivos.show', item.key)"
-                        class="text-[15px] font-medium hover:text-brand-cream"
-                        :class="item.key === goal ? 'text-brand-cream' : 'text-brand-muted-3'"
+                        class="hover:text-brand-gold"
+                        :class="item.key === goal ? 'text-white' : 'text-brand-muted'"
                     >
                         {{ item.title.split(' ')[0] }}
                     </Link>
-                    <Link
-                        :href="route('home')"
-                        class="rounded-full bg-brand-gold px-[18px] py-2.5 text-[15px] font-bold text-brand-ink hover:bg-brand-gold-hover hover:text-brand-ink"
-                    >
-                        Voltar ao início
-                    </Link>
+                    <Link :href="route('home')" class="btn-skew hover:bg-white hover:text-brand-ink"> Voltar ao início </Link>
                 </nav>
 
-                <button class="rounded-full border border-brand-line3 p-2 text-brand-cream lg:hidden" type="button" @click="menuOpen = !menuOpen">
+                <button class="border border-brand-gold/50 p-2 text-white lg:hidden" type="button" @click="menuOpen = !menuOpen">
                     <X v-if="menuOpen" class="size-5" />
                     <Menu v-else class="size-5" />
                 </button>
             </div>
 
-            <nav v-if="menuOpen" class="flex flex-col gap-3 border-t border-brand-line px-6 py-4 lg:hidden">
+            <nav v-if="menuOpen" class="flex flex-col gap-3 border-t border-brand-gold/25 px-6 py-4 lg:hidden">
                 <Link
                     v-for="item in GOAL_DETAILS"
                     :key="item.key"
                     :href="route('objetivos.show', item.key)"
-                    class="text-[15px] font-medium text-brand-muted-3"
+                    class="text-[17px] font-bold uppercase tracking-[1px] text-brand-muted"
                     @click="menuOpen = false"
                 >
                     {{ item.title }}
                 </Link>
-                <Link :href="route('home')" class="text-[15px] font-medium text-brand-gold" @click="menuOpen = false"> Voltar ao início </Link>
+                <Link :href="route('home')" class="btn-skew w-fit" @click="menuOpen = false"> Voltar ao início </Link>
             </nav>
         </header>
 
-        <section class="mx-auto max-w-[1200px] px-6 pb-8 pt-[clamp(40px,6vw,72px)]">
-            <Link :href="`${route('home')}#objetivos`" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-muted-3 hover:text-brand-cream">
+        <section class="relative z-[1] mx-auto max-w-[1200px] px-6 pb-8 pt-[clamp(40px,6vw,72px)]">
+            <Link
+                :href="`${route('home')}#como-funciona`"
+                class="inline-flex items-center gap-2 text-sm font-semibold text-brand-muted-3 hover:text-brand-cream"
+            >
                 <ArrowLeft class="size-4" />
                 5 objetivos por dia
             </Link>
@@ -103,7 +99,7 @@ watch(
             v-for="item in GOAL_DETAILS"
             :id="item.key"
             :key="item.key"
-            class="scroll-mt-24 border-t border-brand-line"
+            class="relative z-[1] scroll-mt-24 border-t border-brand-line"
             :class="item.key === 'flexoes' || item.key === 'alimentacao' || item.key === 'habilidade' ? 'bg-brand-strip' : 'bg-brand-ink'"
         >
             <div class="mx-auto grid max-w-[1200px] items-start gap-10 px-6 py-[clamp(56px,8vw,96px)] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
@@ -111,7 +107,7 @@ watch(
                     <img :src="item.icon" alt="" class="size-[88px]" />
                     <div class="text-sm font-bold uppercase tracking-[3px]" :style="{ color: item.color }">{{ item.pillar }}</div>
                     <h2 class="display-title m-0 text-[clamp(40px,5vw,72px)]">{{ item.title }}</h2>
-                    <p class="font-display text-[clamp(32px,4vw,48px)] font-extrabold leading-none" :style="{ color: item.color }">
+                    <p class="text-[clamp(32px,4vw,48px)] font-extrabold leading-none" :style="{ color: item.color }">
                         {{ item.metric }}
                     </p>
                     <p class="m-0 max-w-[420px] text-[17px] leading-relaxed text-brand-muted">{{ item.desc }}</p>
@@ -141,7 +137,7 @@ watch(
 
             <div v-if="item.key === 'flexoes'" class="mx-auto max-w-[1200px] px-6 pb-[clamp(56px,8vw,96px)]">
                 <div class="grid items-center gap-8 lg:grid-cols-2">
-                    <div class="flex flex-col gap-3.5 rounded-[22px] border border-brand-line2 bg-brand-ink px-6 pb-[18px] pt-6">
+                    <div class="flex flex-col gap-3.5 border border-brand-gold/35 bg-brand-ink px-6 pb-[18px] pt-6">
                         <BrandArt kind="flexoes" />
                         <div class="flex justify-between text-[13px] font-bold uppercase tracking-widest text-brand-muted-2">
                             <span>30 / dia</span>
@@ -149,16 +145,21 @@ watch(
                             <span>100 / dia</span>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-6 rounded-3xl border border-brand-line2 bg-brand-ink p-7">
+                    <div class="flex flex-col gap-6 border border-brand-gold/35 bg-brand-ink p-7">
                         <div class="flex items-end justify-between gap-4">
                             <div class="flex flex-col gap-1">
                                 <span class="text-[13px] font-bold uppercase tracking-[2px] text-brand-muted-2">Dia {{ pushDay }}</span>
-                                <span class="font-display text-[88px] font-black leading-none tabular-nums text-brand-cream">{{ pushReps }}</span>
+                                <span class="text-[88px] font-extrabold tabular-nums leading-none text-brand-cream">{{ pushReps }}</span>
                             </div>
-                            <span class="font-display pb-1.5 text-[22px] font-bold uppercase text-brand-conhecimento">flexões</span>
+                            <span class="pb-1.5 text-[22px] font-bold uppercase text-brand-conhecimento">flexões</span>
                         </div>
                         <div class="flex h-[120px] items-end gap-0.5">
-                            <div v-for="(bar, index) in bars" :key="index" class="flex-1 rounded-t-sm" :style="{ height: bar.h, background: bar.c }" />
+                            <div
+                                v-for="(bar, index) in bars"
+                                :key="index"
+                                class="flex-1 rounded-t-sm"
+                                :style="{ height: bar.h, background: bar.c }"
+                            />
                         </div>
                         <input v-model.number="pushDay" type="range" min="1" max="60" aria-label="Dia do desafio" class="w-full" />
                         <div class="flex justify-between text-[13px] font-semibold text-brand-muted-2">
@@ -171,14 +172,11 @@ watch(
             </div>
         </section>
 
-        <section class="bg-brand-gold text-brand-ink">
+        <section class="relative z-[1] bg-brand-gold text-brand-ink">
             <div class="mx-auto flex max-w-[1200px] flex-col items-start gap-5 px-6 py-16 lg:flex-row lg:items-center lg:justify-between">
-                <h2 class="display-title m-0 text-[clamp(36px,5vw,56px)]">Cinco por dia.<br />Sessenta dias.</h2>
-                <Link
-                    :href="`${route('home')}#entrar`"
-                    class="rounded-full bg-brand-ink px-8 py-[18px] text-[17px] font-bold text-brand-cream hover:bg-brand-line hover:text-brand-cream"
-                >
-                    Quem topa?
+                <h2 class="display-title m-0 text-[clamp(36px,5vw,56px)]">Garanta sua vaga.<br />Desafio de Verão.</h2>
+                <Link :href="`${route('home')}#inscricao`" class="btn-ghost-line border-brand-ink text-brand-ink hover:bg-brand-ink hover:text-white">
+                    GARANTA SUA VAGA!
                 </Link>
             </div>
         </section>
