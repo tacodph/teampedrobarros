@@ -1,4 +1,4 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import AppLogo from '@/components/AppLogo.vue';
 import { Head, Link } from '@inertiajs/vue3';
 import { Menu, X } from 'lucide-vue-next';
@@ -82,7 +82,7 @@ const navLinks = [
 </script>
 
 <template>
-    <Head title="Desafio de Verão" />
+    <Head title="Desafio de Verão: 30 dias de treino e dieta" />
 
     <div class="brand-canvas">
         <header class="relative z-[2] mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-4 px-6 py-[22px]">
