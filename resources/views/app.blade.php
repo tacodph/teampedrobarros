@@ -11,7 +11,7 @@
         ? 'Conheça as regras e metas do Desafio de Verão Team Pedro Barros: treino, alimentação, oração, habilidade e flexões durante 30 dias.'
         : '30 dias de treino, dieta com nutricionista e bioimpedância para chegar ao verão mais leve e saudável. De 01/11 a 05/12, apenas R$ 60,00. Garanta sua vaga!';
     $canonicalUrl = url()->current();
-    $shareImage = url('/images/og-image.jpg').'?v=1';
+    $shareImage = secure_url('/images/share-desafio.jpg');
 
     $schema = [
         '@context' => 'https://schema.org',
@@ -88,6 +88,7 @@
         <meta property="og:description" content="{{ $shareDescription }}">
         <meta property="og:url" content="{{ $canonicalUrl }}">
         <meta property="og:image" content="{{ $shareImage }}">
+        <meta property="og:image:secure_url" content="{{ $shareImage }}">
         <meta property="og:image:type" content="image/jpeg">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
